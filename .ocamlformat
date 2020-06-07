@@ -1,0 +1,9 @@
+profile = ocamlformat
+break-separators = after
+break-struct = natural
+field-space = tight
+space-around-arrays
+space-around-lists
+space-around-records
+space-around-variants
+wrap-comments
