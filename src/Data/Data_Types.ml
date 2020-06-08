@@ -6,7 +6,7 @@ type gossip_name = string
 
 type start_name = string
 
-external string_of_start_name: start_name -> string = "%identity"
+external string_of_start_name : start_name -> string = "%identity"
 
 type area_id = int
 
