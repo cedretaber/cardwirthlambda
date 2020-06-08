@@ -1,4 +1,37 @@
+type scenario_name = string
+
+type author_name = string
+
+type gossip_name = string
+
+type start_name = string
+
+type area_id = int
+
+type battle_id = int
+
+type package_id = int
+
+type cast_id = int
+
+type skill_id = int
+
+type item_id = int
+
+type beast_id = int
+
+type info_id = int
+
+type is_complete = bool
+
 module Path = struct type t = string end
+
+module Comparison = struct
+  type t = Eq | Ne | Lt | Gt
+
+  let compare comp x y =
+    match comp with Eq -> x = y | Ne -> x <> y | Lt -> x < y | Gt -> x > y
+end
 
 module Enhance = struct
   module Types = struct
@@ -29,6 +62,8 @@ end
 module Money = struct type t = int end
 
 module Percent = struct type t = int end
+
+module Decisecond = struct type t = int end
 
 module ActionCard = struct type t = Skill | Item | Beast end
 

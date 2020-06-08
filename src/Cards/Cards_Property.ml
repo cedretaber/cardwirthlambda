@@ -1,5 +1,5 @@
-type t =
-  { id: int;
+type 'id t =
+  { id: 'id;
     name: string;
     image: Data.Types.Path.t;
     description: string;

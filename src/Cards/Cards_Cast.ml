@@ -1,3 +1,5 @@
+open Data
+open Types
 module Skill = Cards_Skill
 module Item = Cards_Item
 module Beast = Cards_Beast
@@ -41,7 +43,7 @@ module Ability = struct
 end
 
 module Status = struct
-  type mentality = { duration: int; mentality: Data.Casts.Mentality.t }
+  type mentality = { duration: int; mentality: Casts.Mentality.t }
 
   type t =
     { mentality: mentality;
@@ -57,9 +59,9 @@ end
 type life = { max: int; current: int }
 
 type property =
-  { id: int;
+  { id: cast_id;
     name: string;
-    image: Data.Types.Path.t;
+    image: Path.t;
     description: string;
     level: int;
     life: life;
@@ -67,7 +69,7 @@ type property =
     ability: Ability.t;
     status: Status.t;
     enhance: Enhance.t;
-    coupons: Data.Casts.Coupon.Set.t
+    coupons: Casts.Coupon.Set.t
   }
 
 type t =

@@ -8,7 +8,8 @@ module Depiction = struct
       ignore_effectbooster: bool
     }
 
-  let make ?(doanime=true) ?(ignore_effectbooster=false) transition transition_speed =
+  let make ?(doanime = true) ?(ignore_effectbooster = false) transition
+      transition_speed =
     { transition; transition_speed; doanime; ignore_effectbooster }
 end
 

@@ -1,8 +1,10 @@
+open Data
+open Types
 module Property = Cards_Property
 
 type t =
-  { property: Property.t;
-    motions: Data.Motion.t list;
+  { property: beast_id Property.t;
+    motions: Motion.t list;
     beasts: t array;
     events: Scenario.Event.t list
   }

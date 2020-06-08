@@ -1,9 +1,11 @@
-type t = { name: string; value: int }
+type name = string
+
+type t = { name: name; value: int }
 
 module Set = struct
   module Map = Belt.Map.String
 
-  type map = string Map.t
+  type map = name Map.t
 
   type t =
     { normals: map;

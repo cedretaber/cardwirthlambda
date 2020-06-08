@@ -1,12 +1,14 @@
+open Data
+open Types
 module Property = Cards_Property
 module Beast = Cards_Beast
 
 type t =
-  { property: Property.t;
-    price: Data.Types.Money.t;
-    enhance_owner: Data.Types.Enhance.t;
+  { property: item_id Property.t;
+    price: Money.t;
+    enhance_owner: Enhance.t;
     hold: bool;
-    motions: Data.Motion.t list;
+    motions: Motion.t list;
     beasts: Beast.t array;
     events: Scenario.Event.t list
   }
