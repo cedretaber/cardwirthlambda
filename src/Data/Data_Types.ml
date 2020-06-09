@@ -26,6 +26,8 @@ type info_id = int
 
 type is_complete = bool
 
+type random_seed = int
+
 module Path = struct type t = string end
 
 module Comparison = struct
@@ -60,6 +62,8 @@ module Level = struct
 
   module Range = struct type t = { max: int; min: int } end
 end
+
+module Round = struct type t = int end
 
 module Money = struct type t = int end
 

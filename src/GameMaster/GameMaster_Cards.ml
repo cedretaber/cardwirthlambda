@@ -1,15 +1,23 @@
-module Adventurers = struct
-  let party_limit = 6
+module Cast = Cards.Cast
 
+module Adventurers = struct
   type position = int
 
-  module CardState = struct
-    type t = Exist of Cards.Cast.t | Flipped of Cards.Cast.t
+  type state = Exist | Flipped
 
-    let cast = function Exist cast -> cast | Flipped cast -> cast
-  end
+  type t = (state * Cast.t) array
 
-  type t = CardState.t array
+  let cast (_, cast) = cast
 end
 
-module Enemies = struct type t = Cards.Cast.t array end
+module Companion = struct
+  type companion_id = int
+
+  type t = Cast.t array
+end
+
+module Enemies = struct
+  type enemy_id = int
+
+  type t = Cast.t array
+end
